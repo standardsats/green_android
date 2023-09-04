@@ -1,0 +1,73 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+    versionCatalogs {
+        libs {
+            library('play-app-update-ktx', 'com.google.android.play:app-update-ktx:2.1.0')
+
+            library('timber', 'com.jakewharton.timber:timber:5.0.1')
+
+            library('retrofit2', 'com.squareup.retrofit2:retrofit:2.9.0')
+            library('retrofit2-converter-gson', 'com.squareup.retrofit2:converter-gson:2.9.0')
+            library('okhttp3-logging-interceptor', 'com.squareup.okhttp3:logging-interceptor:4.10.0')
+            library('okhttp3-urlconnection', 'com.squareup.okhttp3:okhttp-urlconnection:4.10.0')
+            library('gotev-cookie-store', 'net.gotev:cookie-store:1.5.0')
+
+            library('androidx-navigation-compose', 'androidx.navigation:navigation-compose:2.6.0')
+            library('dagger-hilt-android', 'com.google.dagger:hilt-android:2.45')
+            library('dagger-hilt-compiler', 'com.google.dagger:hilt-compiler:2.45')
+            library('androidx-hilt-navigation-compose', 'androidx.hilt:hilt-navigation-compose:1.0.0')
+
+            library('androidx-core-ktx', 'androidx.core:core-ktx:1.10.1')
+            library('androidx-appcompat', 'androidx.appcompat:appcompat:1.4.2')
+
+            version('compose', '2023.05.01')
+            library('androidx-compose-bom', 'androidx.compose', 'compose-bom').versionRef('compose')
+            library('androidx-compose-foundation', 'androidx.compose.foundation', 'foundation').withoutVersion()
+            library('androidx-compose-ui', 'androidx.compose.ui', 'ui').withoutVersion()
+            library('androidx-compose-ui-test-manifest', 'androidx.compose.ui', 'ui-test-manifest').withoutVersion()
+            library('androidx-compose-ui-test-junit4', 'androidx.compose.ui', 'ui-test-junit4').withoutVersion()
+            library('androidx-compose-ui-tooling', 'androidx.compose.ui', 'ui-tooling').withoutVersion()
+            library('androidx-compose-ui-tooling-preview', 'androidx.compose.ui', 'ui-tooling-preview').withoutVersion()
+            library('androidx-compose-material3', 'androidx.compose.material3', 'material3').withoutVersion()
+            library('androidx-compose-material-icons-extended', 'androidx.compose.material', 'material-icons-extended').withoutVersion()
+
+            library('coil-kt-compose', 'io.coil-kt:coil-compose:2.2.2')
+
+            library('androidx-camera-camera2', 'androidx.camera:camera-camera2:1.3.0-beta01')
+            library('androidx-camera-lifecycle', 'androidx.camera:camera-lifecycle:1.3.0-beta01')
+            library('androidx-camera-view', 'androidx.camera:camera-view:1.3.0-beta01')
+            library('androidx-camera-extensions', 'androidx.camera:camera-extensions:1.3.0-beta01')
+
+            library('accompanist-permissions', 'com.google.accompanist:accompanist-permissions:0.31.3-beta')
+
+//            will be added soon
+//
+//            version('firebase', '30.3.2')
+//            library('firebase-bom', 'com.google.firebase', 'firebase-bom').versionRef('firebase')
+//            library('firebase-analytics-ktx', 'com.google.firebase', 'firebase-analytics-ktx').withoutVersion()
+//            library('firebase-crashlytics-ktx', 'com.google.firebase', 'firebase-crashlytics-ktx').withoutVersion()
+        }
+    }
+}
+
+rootProject.name = "Super App"
+
+include ':core:ui'
+include ':core:resources'
+include ':core:network'
+
+include ':feature:registration'
+
+include ':app'

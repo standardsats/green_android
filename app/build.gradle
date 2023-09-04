@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'com.google.dagger.hilt.android'
+//    id 'com.google.firebase.crashlytics'
+//    id 'com.google.gms.google-services'
+}
+
+android {
+    def localProperties = new Properties()
+    localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+
+    signingConfigs {
+        release {
+            storeFile file(localProperties['signingConfig.storeFile'])
+            storePassword localProperties['signingConfig.storePassword']
+            keyAlias localProperties['signingConfig.keyAlias']
+            keyPassword localProperties['signingConfig.keyPassword']
+        }
+    }
+
+    namespace 'io.crypto'
+//    compileSdk 34
+
+    defaultConfig {
+        applicationId "io.crypto"
+//        minSdk 24
+//        targetSdk 34
+        versionCode localProperties['versionCode'] as Integer
+        versionName localProperties['versionName']
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.dev'
+
+            buildConfigField "String", "BASE_URL", localProperties['debug.baseUrl']
+//            resValue("bool", "FIREBASE_ANALYTICS_ACTIVATED", localProperties['debug.firebaseAnalyticsActivated'])
+//            resValue("bool", "FIREBASE_CRASHLYTICS_ENABLED", localProperties['debug.firebaseCrashlyticsEnabled'])
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources false
+
+            buildConfigField "String", "BASE_URL", localProperties['release.baseUrl']
+//            resValue("bool", "FIREBASE_ANALYTICS_ACTIVATED", localProperties['release.firebaseAnalyticsActivated'])
+//            resValue("bool", "FIREBASE_CRASHLYTICS_ENABLED", localProperties['release.firebaseCrashlyticsEnabled'])
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.6'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.dagger.hilt.android)
+    kapt(libs.dagger.hilt.compiler)
+
+    implementation(libs.play.app.update.ktx)
+    implementation(libs.timber)
+
+//    implementation platform(libs.firebase.bom)
+//    implementation(libs.firebase.analytics.ktx)
+//    implementation(libs.firebase.crashlytics.ktx)
+
+    def composeBom = platform(libs.androidx.compose.bom)
+    implementation composeBom
+    androidTestImplementation composeBom
+
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.extended)
+
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+
+    implementation project(path: ':core:ui')
+    implementation project(path: ':core:resources')
+
+    implementation project(path: ':feature:registration')
+}

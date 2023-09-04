@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_to_wallet">Добро пожаловать в Thai digital wallet!</string>
+    <string name="create_wallet">Создать кошелек</string>
+    <string name="already_have_wallet">Уже есть кошелек</string>
+</resources>

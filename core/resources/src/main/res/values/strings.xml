@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="en" translatable="false">En</string>
+    <string name="welcome_to_wallet">Welcome to Thai digital wallet!</string>
+    <string name="create_wallet">Create wallet</string>
+    <string name="already_have_wallet">Already have wallet</string>
+</resources>

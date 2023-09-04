@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'io.crypto.core.network'
+}
+
+dependencies {
+
+    implementation(libs.retrofit2)
+    implementation(libs.retrofit2.converter.gson)
+    implementation(libs.okhttp3.logging.interceptor)
+    implementation(libs.okhttp3.urlconnection)
+    implementation(libs.gotev.cookie.store)
+    implementation(libs.timber)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.dagger.hilt.android)
+
+    kapt(libs.dagger.hilt.compiler)
+}

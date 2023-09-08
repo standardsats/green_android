@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.crypto.core.ui.theme.LightGray
 import io.crypto.core.ui.theme.SuperAppTheme
-import io.crypto.core.ui.theme.TextRegular_W700_19_Dark
+import io.crypto.core.ui.theme.TextBold_19Dark
 
 @Composable
 fun SuperOutlinedButton(
@@ -34,7 +34,7 @@ fun SuperOutlinedButton(
     ) {
         Text(
             text = text,
-            style = TextRegular_W700_19_Dark
+            style = TextBold_19Dark
         )
     }
 }

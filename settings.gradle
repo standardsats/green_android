@@ -69,5 +69,6 @@ include ':core:resources'
 include ':core:network'
 
 include ':feature:registration'
+include ':feature:pin-lock'
 
 include ':app'

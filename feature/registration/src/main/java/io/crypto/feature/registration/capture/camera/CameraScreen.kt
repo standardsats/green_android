@@ -9,12 +9,15 @@ import androidx.camera.core.ImageProxy
 import androidx.camera.view.LifecycleCameraController
 import androidx.camera.view.PreviewView
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -78,11 +81,43 @@ private fun CameraContent(
     val lifecycleOwner = LocalLifecycleOwner.current
     val cameraController = remember { LifecycleCameraController(context) }
 
+    Box(modifier = Modifier.fillMaxSize()) {
+//        Icon(
+//            modifier = Modifier.clickable(onClick =),
+//            painter =,
+//            contentDescription = null,
+//        )
+
+        Column(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            AndroidView(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(0.8f),
+                factory = { context ->
+                    PreviewView(context).apply {
+                        layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT)
+                        setBackgroundColor(Color.Black.toArgb())
+                        implementationMode = PreviewView.ImplementationMode.COMPATIBLE
+                        scaleType = PreviewView.ScaleType.FILL_START
+                    }.also { previewView ->
+                        previewView.controller = cameraController
+                        cameraController.bindToLifecycle(lifecycleOwner)
+                    }
+                }
+            )
+
+
+        }
+    }
+
+
+
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         floatingActionButton = {
             ExtendedFloatingActionButton(
-                text = Text(text = "Take photo"),
                 onClick = {
                     val mainExecutor = ContextCompat.getMainExecutor(context)
 
@@ -103,8 +138,10 @@ private fun CameraContent(
                                 // TODO Timber Log
                             }
                         })
-                }
-            )
+                },
+            ) {
+
+            }
         }
     ) { paddingValues: PaddingValues ->
         AndroidView(

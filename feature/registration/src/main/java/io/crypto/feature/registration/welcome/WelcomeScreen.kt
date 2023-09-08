@@ -27,8 +27,8 @@ import io.crypto.core.ui.components.SuperGradientButton
 import io.crypto.core.ui.components.SuperOutlinedButton
 import io.crypto.core.ui.theme.LightGray
 import io.crypto.core.ui.theme.SuperAppTheme
-import io.crypto.core.ui.theme.TextBold40_50Dark
 import io.crypto.core.ui.theme.TextMedium20_50Grey
+import io.crypto.core.ui.theme.TextMedium_37_50Dark
 
 @Composable
 fun WelcomeScreen(
@@ -66,7 +66,7 @@ fun WelcomeScreen(
                     end = 34.dp
                 ),
                 text = stringResource(id = R.string.welcome_to_wallet),
-                style = TextBold40_50Dark
+                style = TextMedium_37_50Dark
             )
 
             SuperGradientButton(

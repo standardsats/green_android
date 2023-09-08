@@ -6,36 +6,31 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import io.crypto.core.ui.theme.FilledButtonGradient
 import io.crypto.core.ui.theme.SuperAppTheme
-import io.crypto.core.ui.theme.TextBold_19White
+import io.crypto.core.ui.theme.TextBold_19Blue
 
 @Composable
-fun SuperGradientButton(
+fun SuperTextButton(
     modifier: Modifier = Modifier,
     text: String,
     onClick: () -> Unit,
 ) {
-    Button(
+    TextButton(
         modifier = modifier
             .height(46.dp)
             .background(
                 shape = RoundedCornerShape(5.dp),
-                brush = FilledButtonGradient
+                color = Color.White
             ),
-        colors = ButtonDefaults.buttonColors(
-            containerColor = Color.Transparent
-        ),
         contentPadding = PaddingValues(),
         onClick = onClick
     ) {
@@ -46,7 +41,7 @@ fun SuperGradientButton(
         ) {
             Text(
                 text = text,
-                style = TextBold_19White
+                style = TextBold_19Blue
             )
         }
     }
@@ -54,10 +49,10 @@ fun SuperGradientButton(
 
 @Preview
 @Composable
-fun FilledButtonPreview() {
+fun SuperTextButtonPreview() {
     SuperAppTheme {
         Surface {
-            SuperGradientButton(
+            SuperTextButton(
                 text = "Create",
                 onClick = {}
             )

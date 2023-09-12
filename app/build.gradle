@@ -100,11 +100,15 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.icons.extended)
 
+    implementation(libs.systemuicontroller)
+
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
 
     implementation project(path: ':core:ui')
     implementation project(path: ':core:resources')
+    implementation project(path: ':core:navigation')
 
     implementation project(path: ':feature:registration')
+    implementation project(path: ':feature:camera')
 }

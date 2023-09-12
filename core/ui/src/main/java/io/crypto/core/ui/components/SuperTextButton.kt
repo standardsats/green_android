@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.crypto.core.ui.theme.SuperAppTheme
@@ -23,6 +24,7 @@ fun SuperTextButton(
     modifier: Modifier = Modifier,
     text: String,
     onClick: () -> Unit,
+    style: TextStyle = TextBold_19Blue
 ) {
     TextButton(
         modifier = modifier
@@ -32,7 +34,8 @@ fun SuperTextButton(
                 color = Color.White
             ),
         contentPadding = PaddingValues(),
-        onClick = onClick
+        onClick = onClick,
+        shape = RoundedCornerShape(5.dp)
     ) {
         Box(
             modifier = Modifier
@@ -41,7 +44,7 @@ fun SuperTextButton(
         ) {
             Text(
                 text = text,
-                style = TextBold_19Blue
+                style = style
             )
         }
     }

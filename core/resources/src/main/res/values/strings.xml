@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="en" translatable="false">En</string>
-    <string name="welcome_to_wallet">Welcome to Thai digital wallet!</string>
+    <string name="welcome_to_wallet">Welcome \nto Thai digital wallet!</string>
     <string name="create_wallet">Create wallet</string>
     <string name="already_have_wallet">Already have wallet</string>
+    <string name="enter_recovery_phrase" translatable="false">Enter your recovery phrase</string>
+    <string name="provided_registration" translatable="false">You were provided with it during registration.</string>
+    <string name="title_incorrect" translatable="false">Incorrect recovery phrase entered</string>
+    <string name="desc_incorrect" translatable="false">Try entering your recovery phrase again, or contact your nearest post office. When contacting the post office, your wallet will be frozen and a new one will be created, to which funds will be transferred</string>
+    <string name="confirm_picture" translatable="false">To confirm your entry, you need your full-face photo, as in the picture below</string>
     <string name="id_confirmation">ID confirmation</string>
     <string name="less_than_3_minutes">It will take less than 3 minutes</string>
     <string name="identification">Identification</string>
@@ -11,6 +16,7 @@
     <string name="short_video">Short video</string>
     <string name="take_video">Take a video</string>
     <string name="next_consent">By clicking "next", you consent to the processing of personal data in accordance with the Consent to the processing of personal data</string>
+    <string name="take_photo" translatable="false">I\'m ready to take a photo</string>
     <string name="next">Next</string>
     <string name="hold_document">Hold the front of your document facing forwards</string>
     <string name="front_side_document">Front side of the document</string>

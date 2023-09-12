@@ -62,8 +62,8 @@ fun WelcomeScreen(
             Text(
                 modifier = Modifier.padding(
                     top = 34.dp,
-                    start = 34.dp,
-                    end = 34.dp
+                    start = 16.dp,
+                    end = 16.dp
                 ),
                 text = stringResource(id = R.string.welcome_to_wallet),
                 style = TextMedium_37_50Dark
@@ -72,8 +72,8 @@ fun WelcomeScreen(
             SuperGradientButton(
                 modifier = Modifier.padding(
                     top = 62.dp,
-                    start = 30.dp,
-                    end = 30.dp
+                    start = 16.dp,
+                    end = 16.dp
                 ),
                 text = stringResource(id = R.string.create_wallet),
                 onClick = onCreateWalletClick
@@ -82,8 +82,8 @@ fun WelcomeScreen(
             SuperOutlinedButton(
                 modifier = Modifier.padding(
                     top = 23.dp,
-                    start = 30.dp,
-                    end = 30.dp
+                    start = 16.dp,
+                    end = 16.dp
                 ),
                 text = stringResource(id = R.string.already_have_wallet),
                 onClick = onAlreadyHaveClick

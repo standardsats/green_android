@@ -31,6 +31,7 @@ dependencyResolutionManagement {
 
             library('androidx-core-ktx', 'androidx.core:core-ktx:1.10.1')
             library('androidx-appcompat', 'androidx.appcompat:appcompat:1.4.2')
+            library('systemuicontroller', 'com.google.accompanist:accompanist-systemuicontroller:0.32.0')
 
             version('compose', '2023.05.01')
             library('androidx-compose-bom', 'androidx.compose', 'compose-bom').versionRef('compose')
@@ -67,8 +68,10 @@ rootProject.name = "Super App"
 include ':core:ui'
 include ':core:resources'
 include ':core:network'
+include ':core:navigation'
 
 include ':feature:registration'
 include ':feature:pin-lock'
+include ':feature:camera'
 
 include ':app'

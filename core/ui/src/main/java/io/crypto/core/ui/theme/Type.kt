@@ -31,9 +31,40 @@ val TextRegular = TextStyle(
     fontWeight = FontWeight.Normal
 )
 
+val TextRegular_15_15 = TextRegular.copy(
+    fontSize = 15.sp,
+    lineHeight = 15.sp,
+)
+
+val TextRegular_15_15DarkTurquoise = TextRegular_15_15.copy(
+    color = DarkTurquoise
+)
+
+val TextRegular_15_15DogwoodRose = TextRegular_15_15.copy(
+    color = DogwoodRose
+)
+
+val TextRegular_18_21 = TextRegular.copy(
+    fontSize = 18.sp,
+    lineHeight = 21.sp,
+)
+
+val TextRegular_18_21Dark = TextRegular_18_21.copy(
+    color = Dark
+)
+
 val TextRegular_14_17_5 = TextRegular.copy(
     fontSize = 14.sp,
     lineHeight = 17.5.sp,
+)
+
+val TextRegular_15_30 = TextRegular.copy(
+    fontSize = 15.sp,
+    lineHeight = 30.sp,
+)
+
+val TextRegular_15_30Dark = TextRegular_15_30.copy(
+    color = Dark
 )
 
 val TextRegular_14_17_5Grey = TextRegular_14_17_5.copy(
@@ -84,6 +115,24 @@ val TextRegular_19_White = TextRegular_19.copy(
 )
 
 val TextRegular_19_Dark = TextRegular_19.copy(
+    color = Dark
+)
+
+val TextRegular_25_30 = TextRegular.copy(
+    fontSize = 25.sp,
+    lineHeight = 30.sp,
+)
+
+val TextRegular_25_30_Dark = TextRegular_25_30.copy(
+    color = Dark
+)
+
+val TextRegular_35_50 = TextRegular.copy(
+    fontSize = 35.sp,
+    lineHeight = 50.sp,
+)
+
+val TextRegular_35_50_Dark = TextRegular_35_50.copy(
     color = Dark
 )
 
@@ -162,5 +211,13 @@ val TextBold_19Blue = TextBold_19.copy(
 )
 
 val TextBold_19Dark = TextBold_19.copy(
+    color = Dark
+)
+
+val TextBold_36 = TextBold.copy(
+    fontSize = 36.sp,
+)
+
+val TextBold_36Dark = TextBold_36.copy(
     color = Dark
 )

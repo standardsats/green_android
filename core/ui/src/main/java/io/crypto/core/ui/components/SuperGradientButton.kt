@@ -37,6 +37,7 @@ fun SuperGradientButton(
             containerColor = Color.Transparent
         ),
         contentPadding = PaddingValues(),
+        shape = RoundedCornerShape(5.dp),
         onClick = onClick
     ) {
         Box(

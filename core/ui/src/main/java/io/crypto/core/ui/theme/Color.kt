@@ -24,6 +24,9 @@ val DogwoodRose = Color(0xFFCF1A66)
 val White = Color(0XFFFFFFFF)
 val Light = Color(0xFFFAFBFC)
 
+val AzureishWhite = Color(0xFFDFE5F4)
+val Border = Color(0xFFEDF0F7)
+
 val FilledButtonGradient = Brush.horizontalGradient(
     listOf(
         DarkTurquoise,

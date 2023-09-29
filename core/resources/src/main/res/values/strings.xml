@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="en" translatable="false">En</string>
     <string name="welcome_to_wallet">Welcome \nto Thai digital wallet!</string>
     <string name="create_wallet">Create wallet</string>
@@ -21,11 +21,13 @@
     <string name="hold_document">Hold the front of your document facing forwards</string>
     <string name="front_side_document">Front side of the document</string>
     <string name="scan_front_document">Scan the front side of the document</string>
-    <string name="id_card">ID CARD</string>
+    <string name="id_card">Id card</string>
     <string name="make_sure_data_visible">Make sure all data on the document is visible and easy to read</string>
     <string name="send_verification">Send for verification</string>
     <string name="take_another_photo">Take another photo</string>
     <string name="make_short_video">We\'ll make a short video with a full face, turn the head to the left, right, up and down</string>
+    <string name="make_video">Make a video</string>
+    <string name="make_verification_video">make a video for verification</string>
     <string name="full_face">Full face</string>
     <string name="turn_right">Turn right</string>
     <string name="turn_left">Turn left</string>
@@ -51,4 +53,5 @@
     <string name="verify_identity_post_office">To solve this problem, please go to the nearest post office to verify your identity</string>
     <string name="id_already_has_wallet">This ID already has a wallet</string>
     <string name="sign_in">Sign in</string>
+
 </resources>

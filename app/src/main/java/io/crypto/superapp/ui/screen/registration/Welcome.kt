@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import io.crypto.feature.navigation.destination.Destination
 import io.crypto.feature.registration.welcome.WelcomeScreen
+import io.crypto.superapp.ui.screen.pin_lock.PinLockDestination
 
 object WelcomeDestination : Destination {
     override val route = "welcome"
@@ -18,6 +19,10 @@ fun WelcomeScreen(navController: NavController) {
                 IDConfirmationDestination.route
             )
         },
-        onAlreadyHaveClick = { /*TODO*/ }
+        onAlreadyHaveClick = {
+            navController.navigate(
+                PinLockDestination.route
+            )
+        }
     )
 }

@@ -110,5 +110,11 @@ dependencies {
     implementation project(path: ':core:navigation')
 
     implementation project(path: ':feature:registration')
-    implementation project(path: ':feature:camera')
+    implementation project(path: ':feature:capture')
+    implementation project(path: ':feature:pin-lock')
+    
+    implementation("cafe.adriel.voyager:voyager-navigator:1.0.0-rc05")
+    implementation("cafe.adriel.voyager:voyager-androidx:1.0.0-rc05")
+    implementation("cafe.adriel.voyager:voyager-hilt:1.0.0-rc05")
+
 }

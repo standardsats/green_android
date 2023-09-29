@@ -89,6 +89,14 @@ val TextRegular_15_20Dark = TextRegular_15_20.copy(
     color = Dark
 )
 
+val TextRegular_15_20Blue = TextRegular_15_20.copy(
+    color = Blue
+)
+
+val TextRegular_15_20Pink = TextRegular_15_20.copy(
+    color = Pink
+)
+
 val TextRegular_10_15 = TextRegular.copy(
     fontSize = 10.sp,
     lineHeight = 15.sp,
@@ -136,12 +144,21 @@ val TextRegular_35_50_Dark = TextRegular_35_50.copy(
     color = Dark
 )
 
+
 /**
  * Medium ---------------------------------------------------
  */
 val TextMedium = TextStyle(
     fontFamily = GramatikaFontFamily,
     fontWeight = FontWeight.Medium,
+)
+
+val TextMedium_32 = TextMedium.copy(
+    fontSize = 32.sp
+)
+
+val TextMedium_32Dark = TextMedium_32.copy(
+    color = Dark
 )
 
 val TextMedium_14_15 = TextMedium.copy(

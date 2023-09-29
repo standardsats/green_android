@@ -49,7 +49,7 @@ fun CaptureIDHintScreen(
 }
 
 @Composable
-private fun BodyContent(onNextClick: () -> Unit) {
+fun BodyContent(onNextClick: () -> Unit) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.SpaceAround,

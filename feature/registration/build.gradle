@@ -18,6 +18,12 @@ android {
 
 dependencies {
 
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'androidx.camera:camera-core:1.2.3'
+    implementation 'androidx.camera:camera-lifecycle:1.2.3'
+    implementation 'androidx.camera:camera-view:1.2.3'
+    implementation 'com.google.android.libraries.places:places:3.2.0'
     def composeBom = platform(libs.androidx.compose.bom)
     implementation composeBom
     androidTestImplementation composeBom
@@ -32,6 +38,26 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
     kapt(libs.dagger.hilt.compiler)
 
+    //voyager
+    implementation("cafe.adriel.voyager:voyager-navigator:1.0.0-rc05")
+    implementation("cafe.adriel.voyager:voyager-androidx:1.0.0-rc05")
+    implementation("cafe.adriel.voyager:voyager-hilt:1.0.0-rc05")
     implementation project(path: ':core:resources')
     implementation project(path: ':core:ui')
+
+    //Zxing
+    implementation("com.google.zxing:core:3.3.3")
+
+    //Accompanist (Permission)
+    implementation ("com.google.accompanist:accompanist-permissions:0.31.3-beta")
+
+
+    //bottom sheet
+    implementation ("androidx.compose.ui:ui:1.5.1")
+    implementation ("androidx.compose.material:material:1.5.1")
+
+
+    //Google map
+    implementation( "com.google.maps.android:maps-compose:2.14.0")
+    implementation( "com.google.android.gms:play-services-maps:18.1.0")
 }

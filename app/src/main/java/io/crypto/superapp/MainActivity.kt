@@ -9,10 +9,15 @@ import androidx.compose.ui.graphics.Color
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
 import io.crypto.core.ui.theme.SuperAppTheme
+import io.crypto.feature.settings.navigation.NavigationHandler
 import io.crypto.superapp.ui.SuperApp
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var navigationHandler: NavigationHandler
     override fun onCreate(savedInstanceState: Bundle?) {
         setUpAppLanguage()
         super.onCreate(savedInstanceState)
